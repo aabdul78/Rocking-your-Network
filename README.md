@@ -43,7 +43,8 @@ we can see that an ssh port is open, also number of remote access service ports.
 
 port 22\tcp is part of the transport layer
 
-![image](https://github.com/user-attachments/assets/87d5d9bf-0c68-4805-b258-ef1d69696715
+![image](https://github.com/user-attachments/assets/91454a7b-9d1f-4f94-8c53-bcc58727ce04)
+
 
 
 Phase 3: "I Feel a DNS Change Comin' On"
