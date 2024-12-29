@@ -49,20 +49,51 @@ port 22\tcp is part of the transport layer
 
 Phase 3: "I Feel a DNS Change Comin' On"
 
-first i remote log in to their computer using the user and passowrd i was giving
+first I remote log in to their computer using the user and passowrd I was given
 
 ssh jimi@167.172.144.11 yes password hendrix
 
-then i used this commend to find out about what rockStar Corp recently reported, and why that they are unable to access rollingstone.com
+then I used this commend to find out about what rockStar Corp recently reported, and why that they are unable to access rollingstone.com
 
 cat /etc/hosts then i exit there server and u use this command:
 
-exit after that i use my lookup command to find out the domain associated to an IP address
+exit after that I use my lookup command to find out the domain associated to an IP address
 
 nslookup 98.137.246.8
 
 Summary
 
-this hacker has the server and modified the /etc/hosts file to point traffic to another domain. This can be confirmed using nslookup, and my findings are a malicous, in fact point to an unexpected domain. i strongly recommend to closed the port and cotinues monitering their Apllication layer.
+This hacker has the server and modified the /etc/hosts file to point traffic to another domain. This can be confirmed using nslookup, and my findings are a malicous, in fact point to an unexpected domain. I strongly recommend to closed the port and cotinue monitering their apllication layer.
 
 OSI Layer - Application Layer
+
+![image](https://github.com/user-attachments/assets/deeafb9e-96fd-4cdb-8d98-6733b17ad035)
+
+![image](https://github.com/user-attachments/assets/52cea197-c438-43d8-a0e7-f2646cd4dacc)
+
+Phase 4: "ShARP Dressed Man"
+
+Within the RockStar server that you SSH'd into, and in the same directory as the configuration file from Phase 3, the hacker left a note as to where he stored away some packet captures.
+
+ssh jimi:167.172.144.11 password hendrix then i use this command to list all the directories and files inside etc
+
+ls /etc/ then in order to View the file to find where to recover the packet captures. then i use this command
+
+cat /etc/packetcaptureinfo.txt packetcapture : Captured Packets are here: https://drive.google.com/file/d/1ic-CFFGrbruloYrWaw3PvT71elTkh3eF/view?usp=sharing
+
+![image](https://github.com/user-attachments/assets/ef0ad812-03f6-4fd8-8d47-a4cbeaaea172)
+
+![image](https://github.com/user-attachments/assets/aea29395-c70c-40d0-be59-a381854c0642)
+
+![image](https://github.com/user-attachments/assets/72d5d600-f711-4951-853d-7ef7a2081177)
+
+
+Summary
+
+I find out the hacker had a massege or note he or she left behind, offering up sensitive information - an open ssh port with user creds in exchange for one million dollars, my result of the hacker redirecting network traffic or backdooring into RockStar Corp's server, set in the server's /etc/hosts. Rockstar corp' should have their firewall denied any unauthorized traffic on port 22 and check for any network modifications. Hacker has MAC address of Frame 1: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface unknown, id 1 this hacker is using OSI layer network layer.
+
+
+
+
+
+
